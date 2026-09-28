@@ -230,3 +230,24 @@ footer.page a{color:var(--accent); text-decoration:none;}
 .vocab-block[data-mode="hide-uk"] .vocab-table td.uk{filter:blur(7px); user-select:none;}
 .vocab-block[data-mode="hide-es"] .vocab-table td.es,
 .vocab-block[data-mode="hide-es"] .vocab-table td.ipa{filter:blur(7px); user-select:none;}
+
+/* topics — reading texts by level: highlighted verb forms + reveal with translation and new words */
+.tense-chips{display:flex; flex-wrap:wrap; gap:6px; margin:4px 0 14px;}
+.tense-chip{font-size:12px; font-weight:700; padding:3px 10px; border-radius:999px; background:var(--accent2-soft); color:var(--accent2); border:1px solid var(--border);}
+.topic-text{border:1px solid var(--border); border-radius:var(--radius); background:var(--code-bg); padding:18px 22px; margin:16px 0; font-size:16.5px; line-height:1.85;}
+.topic-text p{margin:0 0 12px;}
+.topic-text p:last-child{margin-bottom:0;}
+.topic-text b.v{color:var(--accent); background:var(--accent-soft); padding:0 4px; border-radius:5px;}
+.topic-reveal{border:1px solid var(--border); border-radius:var(--radius); background:var(--card); margin:16px 0; overflow:hidden;}
+.topic-reveal summary{
+  cursor:pointer; list-style:none; padding:12px 18px; font-weight:700; font-size:14.5px; color:var(--accent);
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+}
+.topic-reveal summary::-webkit-details-marker{display:none;}
+.topic-reveal summary::after{content:"▸"; transition:transform .15s;}
+.topic-reveal[open] summary::after{transform:rotate(90deg);}
+.topic-reveal summary:hover{background:var(--accent-soft);}
+.topic-reveal .reveal-body{padding:4px 18px 18px; border-top:1px solid var(--border);}
+.topic-reveal h4{font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--fg-muted); margin:18px 0 8px;}
+.translation{font-size:15px;}
+.translation p{margin:0 0 10px;}
